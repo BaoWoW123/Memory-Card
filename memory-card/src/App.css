@@ -4,6 +4,11 @@ body {
   margin: auto;
 }
 
+.test {
+  color: black;
+  position: absolute;
+  font-size: 3rem;
+}
 header {
   display: flex;
   justify-content: center;
@@ -12,9 +17,10 @@ header {
   margin-bottom: 1rem;
   background: linear-gradient(360deg, red, black);
 }
-.score {
+.scores {
   display: flex;
   justify-content: center;
+  gap: 10rem;
   font-size: 3rem;
 }
 .cards {

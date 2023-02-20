@@ -1,13 +1,15 @@
-import images from "./assets/images";
 import handleClick from "./eventhandler";
+import { randomize } from "./randomizer";
+import React from "react";
 
-const Cards = () => {
+const Cards = (props) => {
   return (
     <div className="cards">
-      {images.map((image, i) => {
+      {randomize(props.amount).map((image, i) => {
         return (
-          <div className="card" key={i} data-id={i}>
-            <img src={image.img} onClick={handleClick} />
+          //randomly generate divs of cards based on amount prop
+          <div className="card" key={i} data-id={image.index}>
+            <img src={image.img} onClick={(e) => handleClick(e, props)} />
             <div className="cardName">{image.name}</div>
           </div>
         );
